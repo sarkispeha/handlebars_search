@@ -1,0 +1,22 @@
+extends layout
+
+block content
+
+	h3 Search a programming language
+	form
+		input(type='text' name='searchField')
+		input(id= 'submit-btn' type='submit' name='submitter')
+
+	div.results
+		h3#language
+		p#description
+
+
+
+		script(src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js")
+		script(src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js")
+		script(src="main.js")
+
+		script(id="search-tpl" type='text/x-handlebars-template')
+			h3 {{language}}
+			p {{description}}
